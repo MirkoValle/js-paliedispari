@@ -1,25 +1,27 @@
 //PALINDROMA
 
 const userWord = prompt("Inserisci una parola Palindroma");
+let stringaInvertita = "";
 
-function verifica(word) {
+//creo la stringa con le lettere invertite
+for (let i = userWord.length - 1; i >= 0; i--) {
+    stringaInvertita += userWord[i];
+}
 
-    let stringaInvertita = "";
+//Invio un output in base alla risposta ricevuta dalla funzione
+if (verifica(userWord, stringaInvertita) == true) {
+    console.log(userWord + " + " + stringaInvertita + "= vero");
+} else {
+    console.log(userWord + " + " + stringaInvertita + "= falso");
+}
 
-    for (let i = word.length - 1; i >= 0; i--) {
-        stringaInvertita += word[i];
-    }
+//Verifico se le due parole sono palindrome (ovvero uguali)
+function verifica(word, invertedWord) {
 
-
-    if (word === stringaInvertita) {
-        console.log(word + " + " + stringaInvertita + "= vero");
+    if (word === invertedWord) {
         return true;
     } else {
-        console.log(word + " + " + stringaInvertita + "= falso");
         return false;
     }
 
-
 }
-
-verifica(userWord)
