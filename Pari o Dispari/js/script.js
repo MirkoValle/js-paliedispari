@@ -19,3 +19,16 @@ function somma(numeroCasuale, numeroUtente) {
     }
 
 }
+
+
+console.log("Numero scelto = " + userNumber);
+console.log("Numero casuale= " + randomNumber);
+console.log("Ovvero= " + risultato);
+console.log("Tu hai scelto= " + choice);
+
+if (choice === risultato) {
+    console.log("Complimenti hai vinto!")
+} else {
+    console.log("Mi dispiace hai perso!")
+}
+
